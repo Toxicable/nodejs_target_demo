@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "update": "./update.sh"
+    "update": "./update.sh",
+    "serve": "architect app1:binary",
+    "build": "architect app1:build"
   },
   "repository": {
     "type": "git",
