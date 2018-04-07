@@ -1,0 +1,26 @@
+{
+  "name": "nodejs_target_demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "update": "./update.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Toxicable/nodejs_target_demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Toxicable/nodejs_target_demo/issues"
+  },
+  "homepage": "https://github.com/Toxicable/nodejs_target_demo#readme",
+  "dependencies": {
+    "@angular-devkit/architect-cli": "^0.5.4",
+    "@angular-devkit/core": "^0.5.4",
+    "express": "^4.16.3",
+    "ts-loader": "^4.2.0",
+    "typescript": "^2.8.1"
+  }
+}

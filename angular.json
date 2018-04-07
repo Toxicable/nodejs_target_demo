@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "projects": {
+    "app1": {
+      "root": "projects/app1",
+      "projectType": "application",
+      "architect": {
+        "binary": {
+          "builder": "@angular-devkit/build-webpack-nodejs:binary",
+          "options": {
+            "entry": "projects/app1/src/main.ts",
+            "buildTarget": "app1:build",
+            "inspect": true
+          }
+        },
+        "build": {
+          "builder": "@angular-devkit/build-webpack-nodejs:build",
+          "options": {
+            "entry": "projects/app1/src/main.ts"
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "from": "src/environments/environments.ts",
+                  "to": "src/environments/environments.prod.ts"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
