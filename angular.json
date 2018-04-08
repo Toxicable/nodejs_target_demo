@@ -8,7 +8,7 @@
         "binary": {
           "builder": "@angular-devkit/build-webpack-nodejs:binary",
           "options": {
-            "entry": "projects/app1/src/main.ts",
+            "entry": "projects/app1/src/awesome.ts",
             "buildTarget": "app1:build"
           }
         },
@@ -16,7 +16,7 @@
           "builder": "@angular-devkit/build-webpack-nodejs:build",
           "options": {
             "entry": "projects/app1/src/awesome.ts",
-            "optimization": false
+            "optimization": true
           },
           "configurations": {
             "production": {
