@@ -20,12 +20,7 @@
           },
           "configurations": {
             "production": {
-              "fileReplacements": [
-                {
-                  "from": "src/environments/environments.ts",
-                  "to": "src/environments/environments.prod.ts"
-                }
-              ]
+              
             }
           }
         }
