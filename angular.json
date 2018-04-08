@@ -16,7 +16,7 @@
           "builder": "@angular-devkit/build-webpack-nodejs:build",
           "options": {
             "entry": "projects/app1/src/main.ts",
-            "optimization": true
+            "optimization": false
           },
           "configurations": {
             "production": {
