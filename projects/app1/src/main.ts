@@ -1,9 +1,8 @@
-console.log('Hello World2');
-setTimeout(() => {
-  debugger;
-  const sadfasdfsda = '';
-}, 2000)
+import * as express from 'express';
 
-var t= 3;
-3 + 3;
-t = ''
+
+const app = express();
+
+app.get('/', (req, res) => res.send('Hello World!2'))
+
+app.listen(3000, () => console.log('Example app listening on port 3000!'))
