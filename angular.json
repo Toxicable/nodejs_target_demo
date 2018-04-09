@@ -15,8 +15,8 @@
         "build": {
           "builder": "@angular-devkit/build-webpack-nodejs:build",
           "options": {
-            "entry": "projects/app1/src/awesome.ts",
-            "outDir": "dist/app1",
+            "main": "projects/app1/src/main.ts",
+            "outputPath": "dist/app1",
             "tsConfig": "tsconfig.json"        
           },
           "configurations": {

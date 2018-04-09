@@ -5,14 +5,16 @@ const app = express();
 
 const t: string = 'a'
 
-app.get('/', (req, res) => {
+app.get('/', async (req, res) => {
     console.log(name);
-    console.log('its a REAL log');
+    console.log('its a REAL log ');
     if(t){
-        throw new Error('helo');
+        // throw new Error('check your debugger for the stack trace');
     }
+    await Promise.resolve();
 
-    res.send('Hello Wo  r ld!2')}
+
+    res.send('Hello World!')}
 
 )
 
