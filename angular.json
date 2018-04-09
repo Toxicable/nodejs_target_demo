@@ -8,14 +8,16 @@
         "binary": {
           "builder": "@angular-devkit/build-webpack-nodejs:binary",
           "options": {
-            "entry": "projects/app1/src/awesome.ts",
-            "buildTarget": "app1:build"
+            "buildTarget": "app1:build",
+            "inspect": true
           }
         },
         "build": {
           "builder": "@angular-devkit/build-webpack-nodejs:build",
           "options": {
-            "entry": "projects/app1/src/awesome.ts"
+            "entry": "projects/app1/src/awesome.ts",
+            "outDir": "dist/app1",
+            "tsConfig": "tsconfig.json"        
           },
           "configurations": {
             "production": {

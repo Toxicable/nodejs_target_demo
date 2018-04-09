@@ -1,12 +1,13 @@
 import * as express from 'express';
-
+import { name } from '@lib';
 
 const app = express();
 
 const t: string = 'a'
 
 app.get('/', (req, res) => {
-
+    console.log(name);
+    console.log('its a REAL log');
     if(t){
         throw new Error('helo');
     }
