@@ -1,3 +1,7 @@
 node_modules
 dist
 *.log
+
+// This is just so you can install from file without errors
+yarn.lock
+yarn-error.log
