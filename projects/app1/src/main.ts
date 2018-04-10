@@ -1,5 +1,5 @@
 import * as express from 'express';
-import { name } from '@lib';
+import { name } from '@lib3';
 
 const app = express();
 
