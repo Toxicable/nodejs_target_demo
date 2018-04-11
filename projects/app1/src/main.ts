@@ -10,6 +10,4 @@ app.get('/', async (req, res) => {
     res.send('Hello World!')
 })
 
-var t = 2;
-
 app.listen(3000, () => console.log('Example app listening on port 3000!  '))
