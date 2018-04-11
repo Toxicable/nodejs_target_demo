@@ -1,21 +1,15 @@
 import * as express from 'express';
-import { name } from '@lib3';
+import { name } from '@lib';
+const someText = require('./hello.txt');
 
 const app = express();
 
-const t: string = 'a'
+console.log(someText)
 
 app.get('/', async (req, res) => {
-    console.log(name);
-    console.log('its a REAL log ');
-    if(t){
-        // throw new Error('check your debugger for the stack trace');
-    }
-    await Promise.resolve();
+    res.send('Hello World!')
+})
 
+var t = 2;
 
-    res.send('Hello World!')}
-
-)
-
-app.listen(3000, () => console.log('Example app listening on port 3000!'))
+app.listen(3000, () => console.log('Example app listening on port 3000!  '))

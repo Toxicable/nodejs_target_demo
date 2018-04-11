@@ -21,10 +21,10 @@
   "homepage": "https://github.com/Toxicable/nodejs_target_demo#readme",
   "dependencies": {
     "@angular-devkit/architect-cli": "^0.5.4",
-    "@angular-devkit/build-webpack-nodejs": "./build-webpack-nodejs.tgz",
     "@angular-devkit/core": "^0.5.4",
     "@types/express": "^4.11.1",
     "express": "^4.16.3",
+    "raw-loader": "^0.5.1",
     "ts-loader": "^4.2.0",
     "typescript": "^2.8.1"
   }
