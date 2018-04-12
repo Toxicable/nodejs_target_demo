@@ -22,8 +22,8 @@
           "configurations": {
             "production": {
               "optimization": false,
-              "additionalAliases": [
-                {"path": "@env", "replaceWith": "./env.ts"}
+              "pathReplacements": [
+                {"path": "@env", "replaceWith": "./env.prod.ts"}
               ]              
             },
             "development": {
