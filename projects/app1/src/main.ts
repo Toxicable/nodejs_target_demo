@@ -1,10 +1,12 @@
 import * as express from 'express';
-import { name } from '@lib';
+// import { name } from '@lib';
 const someText = require('./hello.txt');
+
+import { name } from '@env';
 
 const app = express();
 
-console.log(someText)
+console.log(name)
 
 app.get('/', async (req, res) => {
     res.send('Hello World!')
