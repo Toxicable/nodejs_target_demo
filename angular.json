@@ -45,6 +45,7 @@
             "main": "projects/frontend1/src/main.ts",
             "polyfills": "projects/frontend1/src/polyfills.ts",
             "tsConfig": "projects/frontend1/src/tsconfig.app.json",
+            "progress": false,
             "assets": [
               {
                 "glob": "favicon.ico",
