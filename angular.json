@@ -1,34 +1,138 @@
 {
+  "$schema": "./node_modules/@angular-devkit/core/src/workspace/workspace-schema.json",
   "version": 1,
+  "newProjectRoot": "projects",
   "projects": {
-    "app1": {
-      "root": "projects/app1",
+    "api1": {
+      "root": "projects/api1",
       "projectType": "application",
       "architect": {
         "binary": {
           "builder": "@angular-devkit/build-webpack-nodejs:binary",
           "options": {
-            "buildTarget": "app1:build",
+            "buildTarget": "api1:build",
             "inspect": true
           }
         },
         "build": {
           "builder": "@angular-devkit/build-webpack-nodejs:build",
           "options": {
-            "main": "projects/app1/src/main.ts",
-            "outputPath": "dist/app1",
-            "tsConfig": "tsconfig.json"        
+            "main": "projects/api1/src/main.ts",
+            "tsConfig": "projects/api1/tsconfig.app.json",
+            "outputPath": "dist/api1"
+          },
+          "configurations": {
+            "prod": {
+              "pathReplacements": [
+                {
+                  "path": "@env",
+                  "replaceWith": "./environment/environment.prod.ts"}
+              ]
+            }
+          }
+        }
+      }
+    },
+    "frontend1": {
+      "root": "projects/frontend1",
+      "projectType": "application",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/frontend1",
+            "index": "projects/frontend1/src/index.html",
+            "main": "projects/frontend1/src/main.ts",
+            "polyfills": "projects/frontend1/src/polyfills.ts",
+            "tsConfig": "projects/frontend1/src/tsconfig.app.json",
+            "assets": [
+              {
+                "glob": "favicon.ico",
+                "input": "src",
+                "output": "/"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets",
+                "output": "/assets"
+              }
+            ],
+            "styles": [
+              {
+                "input": "projects/frontend1/src/styles.css"
+              }
+            ],
+            "scripts": []
           },
           "configurations": {
             "production": {
-              "optimization": false,
-              "pathReplacements": [
-                {"path": "@env", "replaceWith": "./env.prod.ts"}
-              ]              
-            },
-            "development": {
-              "optimization": false              
+              "fileReplacements": [
+                {
+                  "src": "environments/environment.ts",
+                  "replaceWith": "environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
             }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "frontend1:build",
+            "proxyConfig": "proxy.conf.json"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "frontend1:build:production"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "src/test.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "src/tsconfig.spec.json",
+            "karmaConfig": "src/karma.conf.js",
+            "styles": [
+              {
+                "input": "styles.css"
+              }
+            ],
+            "scripts": [],
+            "assets": [
+              {
+                "glob": "favicon.ico",
+                "input": "src/",
+                "output": "/"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets",
+                "output": "/assets"
+              }
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "src/tsconfig.app.json",
+              "src/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       }
