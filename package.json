@@ -21,7 +21,7 @@
   "dependencies": {
     "@angular-devkit/architect-cli": "^0.5.4",
     "@angular-devkit/build-angular": "~0.5.0",
-    "@angular-devkit/build-webpack-nodejs": "git+https://github.com/Toxicable/build_webpack_nodejs-builds.git#42b1188181423e3e446748a25e456dd2144fc0e1",
+    "@angular-devkit/build-webpack-nodejs": "git+https://github.com/Toxicable/build_webpack_nodejs-builds.git#91a2652d6cf171aa6a3e165c262bffb0d21c6dfd",
     "@angular-devkit/core": "^0.5.4",
     "@angular/animations": "^6.0.0-rc.5",
     "@angular/cli": "~6.0.0-rc.2",
