@@ -9,3 +9,6 @@ export class AppController {
     return {appName: 'HELLO WORLD'};
   }
 }
+
+var t = 3;
+// t = 'asdf'
